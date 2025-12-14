@@ -13,7 +13,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-          <span className="text-sm text-muted-foreground">Building the future of Web3</span>
+          <span className="text-sm text-muted-foreground">Azure • AWS • Google Cloud Partner</span>
         </motion.div>
 
         {/* Main Heading */}
@@ -23,10 +23,10 @@ export const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
         >
-          <span className="text-foreground">We craft </span>
-          <span className="text-gradient">digital</span>
+          <span className="text-foreground">Unlock </span>
+          <span className="text-gradient">AI Power</span>
           <br />
-          <span className="text-foreground">experiences</span>
+          <span className="text-foreground">for your business</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -36,8 +36,8 @@ export const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          A creative studio specializing in immersive web experiences, 
-          brand identity, and cutting-edge digital products.
+          Your trusted AI solutions partner across Azure, AWS, and Google Cloud. 
+          We accelerate digital transformation with cutting-edge AI and multi-cloud expertise.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -52,14 +52,14 @@ export const HeroSection = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            View Our Work
+            Explore Solutions
           </motion.button>
           <motion.button
             className="px-8 py-4 glass font-display font-semibold rounded-full hover:bg-secondary/50 transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Learn More
+            Schedule Consultation
           </motion.button>
         </motion.div>
       </div>

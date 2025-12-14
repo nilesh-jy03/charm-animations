@@ -2,10 +2,10 @@ import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
 const stats = [
-  { value: '50+', label: 'Projects Delivered' },
-  { value: '$2B+', label: 'Market Cap Created' },
-  { value: '15M+', label: 'Users Reached' },
-  { value: '100%', label: 'Client Satisfaction' },
+  { value: '500+', label: 'AI Projects Delivered' },
+  { value: '98%', label: 'Client Satisfaction' },
+  { value: '150+', label: 'Enterprise Clients' },
+  { value: '24/7', label: 'Global Support' },
 ];
 
 export const AboutSection = () => {
@@ -37,16 +37,17 @@ export const AboutSection = () => {
           >
             <span className="text-sm text-primary tracking-widest uppercase mb-4 block">About Us</span>
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
-              We turn <span className="text-gradient">bold ideas</span> into remarkable digital realities
+              Your trusted <span className="text-gradient">AI transformation</span> partner
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              Igloo is a creative studio at the intersection of design, technology, and culture. 
-              We partner with visionary brands and founders to build products that push boundaries 
-              and captivate audiences worldwide.
+              We are a premier AI solutions partner with deep expertise across Microsoft Azure, 
+              Amazon Web Services, and Google Cloud Platform. Our mission is to accelerate your 
+              digital transformation journey with cutting-edge AI technologies.
             </p>
             <p className="text-muted-foreground mb-8">
-              Our multidisciplinary team brings together expertise in web development, brand strategy, 
-              3D design, and blockchain technology to deliver experiences that stand out in the digital landscape.
+              From generative AI and machine learning to intelligent automation and data analytics, 
+              we deliver end-to-end AI solutions that drive innovation, reduce costs, and create 
+              competitive advantages for enterprises worldwide.
             </p>
             
             <motion.button
@@ -54,7 +55,7 @@ export const AboutSection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Our Story
+              Our Approach
             </motion.button>
           </motion.div>
 

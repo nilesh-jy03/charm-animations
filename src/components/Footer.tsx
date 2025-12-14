@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-const socialLinks = ['Twitter', 'LinkedIn', 'Instagram', 'Dribbble'];
+const socialLinks = ['LinkedIn', 'Twitter', 'GitHub', 'YouTube'];
 const footerLinks = ['Privacy Policy', 'Terms of Service'];
 
 export const Footer = () => {
@@ -14,8 +14,17 @@ export const Footer = () => {
             className="font-display text-xl font-bold text-gradient"
             whileHover={{ scale: 1.05 }}
           >
-            IGLOO
+            NEXUS AI
           </motion.a>
+
+          {/* Cloud Partners */}
+          <div className="flex items-center gap-6 text-muted-foreground text-sm">
+            <span>Azure Partner</span>
+            <span>•</span>
+            <span>AWS Partner</span>
+            <span>•</span>
+            <span>Google Cloud Partner</span>
+          </div>
 
           {/* Social Links */}
           <div className="flex items-center gap-6">
@@ -30,8 +39,12 @@ export const Footer = () => {
               </motion.a>
             ))}
           </div>
+        </div>
 
-          {/* Legal Links */}
+        <div className="mt-8 pt-8 border-t border-border/30 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-muted-foreground">
+            © 2024 Nexus AI Solutions. All rights reserved.
+          </p>
           <div className="flex items-center gap-6">
             {footerLinks.map((link) => (
               <a
@@ -43,12 +56,6 @@ export const Footer = () => {
               </a>
             ))}
           </div>
-        </div>
-
-        <div className="mt-8 pt-8 border-t border-border/30 text-center">
-          <p className="text-sm text-muted-foreground">
-            © 2024 Igloo Inc. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>
