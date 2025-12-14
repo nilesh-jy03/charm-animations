@@ -31,13 +31,13 @@ export const ContactSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <motion.a
-            href="mailto:hello@nexusai.cloud"
+            href="mailto:enquiry@piytechsolutions.com"
             className="px-8 py-4 bg-primary text-primary-foreground font-display font-semibold rounded-full glow-effect inline-flex items-center gap-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <Mail size={20} />
-            hello@nexusai.cloud
+            enquiry@piytechsolutions.com
           </motion.a>
           <motion.button
             className="px-8 py-4 glass font-display font-semibold rounded-full hover:bg-primary/10 transition-colors inline-flex items-center gap-2"
