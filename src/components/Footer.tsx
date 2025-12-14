@@ -11,10 +11,10 @@ export const Footer = () => {
           {/* Logo */}
           <motion.a
             href="#"
-            className="font-display text-xl font-bold text-gradient"
+            className="flex items-center"
             whileHover={{ scale: 1.05 }}
           >
-            NEXUS AI
+            <img src="/images/piytech-logo.png" alt="PIYTECH" className="h-8" />
           </motion.a>
 
           {/* Cloud Partners */}
@@ -43,7 +43,7 @@ export const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-border/30 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2024 Nexus AI Solutions. All rights reserved.
+            © 2024 PIYTECH. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             {footerLinks.map((link) => (
