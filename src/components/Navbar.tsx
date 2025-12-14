@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
-const navItems = ['Work', 'About', 'Services', 'Contact'];
+const navItems = ['Solutions', 'About', 'Services', 'Contact'];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +22,7 @@ export const Navbar = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          IGLOO
+          NEXUS AI
         </motion.a>
 
         {/* Desktop Nav */}
@@ -48,7 +48,7 @@ export const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Get in Touch
+            Get Started
           </motion.button>
         </div>
 
@@ -79,7 +79,7 @@ export const Navbar = () => {
             </a>
           ))}
           <button className="glass px-5 py-2 rounded-full text-sm font-medium text-foreground hover:bg-primary/10 transition-colors w-fit">
-            Get in Touch
+            Get Started
           </button>
         </div>
       </motion.div>

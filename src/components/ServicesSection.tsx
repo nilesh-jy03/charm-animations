@@ -1,27 +1,37 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Palette, Code, Boxes, Sparkles } from 'lucide-react';
+import { Brain, Cloud, Database, Shield, Zap, LineChart } from 'lucide-react';
 
 const services = [
   {
-    icon: Palette,
-    title: 'Brand Identity',
-    description: 'Crafting distinctive visual identities that capture your essence and resonate with your audience.',
+    icon: Brain,
+    title: 'Generative AI',
+    description: 'Harness the power of GPT, Claude, Gemini, and custom LLMs for intelligent content generation and automation.',
   },
   {
-    icon: Code,
-    title: 'Web Development',
-    description: 'Building performant, beautiful websites and applications with cutting-edge technologies.',
+    icon: Cloud,
+    title: 'Cloud Migration',
+    description: 'Seamless migration to Azure, AWS, or GCP with AI-optimized architectures and zero downtime strategies.',
   },
   {
-    icon: Boxes,
-    title: '3D & Motion',
-    description: 'Creating immersive 3D experiences and captivating motion design that brings your brand to life.',
+    icon: Database,
+    title: 'Data & Analytics',
+    description: 'Transform raw data into actionable insights with AI-powered analytics, data lakes, and real-time dashboards.',
   },
   {
-    icon: Sparkles,
-    title: 'Web3 Solutions',
-    description: 'Developing blockchain-powered products from NFT collections to DeFi platforms.',
+    icon: Shield,
+    title: 'AI Security',
+    description: 'Enterprise-grade security with AI-driven threat detection, compliance automation, and identity management.',
+  },
+  {
+    icon: Zap,
+    title: 'Intelligent Automation',
+    description: 'Streamline operations with RPA, intelligent document processing, and AI-powered workflow automation.',
+  },
+  {
+    icon: LineChart,
+    title: 'ML Operations',
+    description: 'End-to-end MLOps pipelines for model training, deployment, monitoring, and continuous improvement.',
   },
 ];
 
@@ -39,25 +49,25 @@ export const ServicesSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-sm text-primary tracking-widest uppercase mb-4 block">What We Do</span>
+          <span className="text-sm text-primary tracking-widest uppercase mb-4 block">What We Offer</span>
           <h2 className="font-display text-4xl md:text-6xl font-bold mb-6">
-            Our <span className="text-gradient">Services</span>
+            AI <span className="text-gradient">Services</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            We offer a comprehensive suite of creative services to help brands 
-            stand out in the digital landscape.
+            Comprehensive AI solutions designed to transform your business operations, 
+            enhance decision-making, and drive sustainable growth.
           </p>
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
               className="group glass p-8 md:p-10 rounded-2xl hover:bg-primary/5 transition-all duration-500 relative overflow-hidden"
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
             >
               {/* Icon */}
