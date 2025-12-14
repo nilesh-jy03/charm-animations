@@ -18,11 +18,11 @@ export const Navbar = () => {
         {/* Logo */}
         <motion.a
           href="#"
-          className="font-display text-2xl font-bold text-gradient"
+          className="flex items-center"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          NEXUS AI
+          <img src="/images/piytech-logo.png" alt="PIYTECH" className="h-10" />
         </motion.a>
 
         {/* Desktop Nav */}
