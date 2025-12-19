@@ -72,9 +72,10 @@ export const HeroSection = () => {
         transition={{ duration: 0.8, delay: 1.2 }}
       >
         <motion.div
-          className="flex flex-col items-center gap-2 text-muted-foreground"
+          className="flex flex-col items-center gap-2 text-muted-foreground cursor-pointer"
           animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
         >
           <span className="text-xs tracking-widest uppercase">Scroll</span>
           <ArrowDown size={16} />
