@@ -40,7 +40,12 @@ export const Navbar = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
             </motion.a>
           ))}
-          <motion.button
+          <motion.a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             className="glass px-5 py-2 rounded-full text-sm font-medium text-foreground hover:bg-primary/10 transition-colors"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -48,8 +53,8 @@ export const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Get Started
-          </motion.button>
+            Home
+          </motion.a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -78,9 +83,17 @@ export const Navbar = () => {
               {item}
             </a>
           ))}
-          <button className="glass px-5 py-2 rounded-full text-sm font-medium text-foreground hover:bg-primary/10 transition-colors w-fit">
-            Get Started
-          </button>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              setIsOpen(false);
+            }}
+            className="glass px-5 py-2 rounded-full text-sm font-medium text-foreground hover:bg-primary/10 transition-colors w-fit"
+          >
+            Home
+          </a>
         </div>
       </motion.div>
     </motion.nav>
