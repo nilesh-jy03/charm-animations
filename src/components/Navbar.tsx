@@ -67,7 +67,7 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       <motion.div
-        className={`md:hidden absolute top-full left-0 right-0 glass ${isOpen ? 'block' : 'hidden'}`}
+        className={`md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border/50 ${isOpen ? 'block' : 'hidden'}`}
         initial={{ opacity: 0, height: 0 }}
         animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }}
       >
