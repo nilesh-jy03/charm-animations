@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
-const navItems = ['Solutions', 'About', 'Services', 'Contact'];
+const navItems = ['Solutions', 'Services', 'About', 'Contact'];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +27,20 @@ export const Navbar = () => {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
+          <motion.a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+          >
+            Home
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
+          </motion.a>
           {navItems.map((item, i) => (
             <motion.a
               key={item}
@@ -34,27 +48,12 @@ export const Navbar = () => {
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 * i + 0.3 }}
+              transition={{ delay: 0.1 * i + 0.4 }}
             >
               {item}
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
             </motion.a>
           ))}
-          <motion.a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className="glass px-5 py-2 rounded-full text-sm font-medium text-foreground hover:bg-primary/10 transition-colors"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Home
-          </motion.a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -73,6 +72,17 @@ export const Navbar = () => {
         animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }}
       >
         <div className="px-6 py-4 flex flex-col gap-4">
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              setIsOpen(false);
+            }}
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Home
+          </a>
           {navItems.map((item) => (
             <a
               key={item}
@@ -83,17 +93,6 @@ export const Navbar = () => {
               {item}
             </a>
           ))}
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-              setIsOpen(false);
-            }}
-            className="glass px-5 py-2 rounded-full text-sm font-medium text-foreground hover:bg-primary/10 transition-colors w-fit"
-          >
-            Home
-          </a>
         </div>
       </motion.div>
     </motion.nav>
