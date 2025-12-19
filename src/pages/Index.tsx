@@ -12,7 +12,7 @@ const Index = () => {
     <div className="relative min-h-screen bg-background overflow-x-hidden">
       <FloatingShapes />
       <Navbar />
-      <main>
+      <main className="pt-16">
         <HeroSection />
         <ProjectsSection />
         <AboutSection />
